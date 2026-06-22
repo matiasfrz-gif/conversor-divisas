@@ -1,0 +1,40 @@
+def calcular_finanzas():
+    #===gastos diarios===
+    gnc_diario = 9000
+    emergencias_diario = 5000
+    cafe_diario = 2500
+    cigarrillos_diario = 1500
+
+    #===gastos mensuales fijo===
+    gastos_mensual = 30000 
+
+    #===ingresos===
+    ganancias_diaria = 50000
+
+    #===calculos===
+    gastos_dia = gnc_diario + emergencias_diario + cafe_diario + cigarrillos_diario 
+    gastos_semana = gastos_dia * 7
+    gastos_mensual_semana = gastos_mensual / 4
+
+    ganancias_semana = ganancias_diaria * 7 
+    saldo_semanal = ganancias_semana - gastos_semana - gastos_mensual_semana
+
+    #===reporte===
+    print("="*45)
+    print(" control de gastos-resumen semanal")
+    print("="*45)
+    print(f"gnc diario:                 ${gnc_diario:,}")
+    print(f"emergencias/extras diario:  ${emergencias_diario:,}") 
+    print(f"cafe diario:                ${cafe_diario:,}")
+    print(f"cigarrillos diario:         ${cigarrillos_diario:,}")
+    print("="*45)
+    print(f"total gastos por dia:       ${gastos_dia:,}") 
+    print(f"total gastos semana:        ${gastos_semana:,}")
+    print(f"gasto mensual/semana:       ${gastos_mensual_semana:,.0f}") 
+    print(f"ganancia semanal:           ${ganancias_semana:,}") 
+    print("-" *45)
+    print(f"SALDO NETO SEMANAL:         ${saldo_semanal:,.0f}") 
+    print(f"SALDO NETO POR DIA:         ${saldo_semanal/7:,.0f}") 
+
+if __name__ == "__main__":
+    calcular_finanzas()
